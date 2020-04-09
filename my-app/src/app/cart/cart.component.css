@@ -1,0 +1,41 @@
+h2{
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Gotu', sans-serif;  
+  font-weight: bold;
+  margin-top: 0;
+}
+.books{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto;
+    /* grid-gap: 0; */
+    padding: 50px;
+    padding-top: 0;
+  }
+  
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 160px;
+    margin-top: 0;
+    margin: 10px;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .price {
+    color: rgb(95, 90, 90);
+    font-size: 16px;
+    padding-bottom: 10px;
+  }
+  
+  .name{
+    white-space: nowrap; 
+    max-width: 140px;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 18px;
+    color: rgb(33, 44, 77);
+  }
+  

@@ -1,0 +1,19 @@
+<div class="topnav">
+  <a routerLink="/books">All books</a>
+  <div class="dropdown">
+    <span>Genres <i class="fas fa-caret-down"></i></span>
+    <div class="dropdown-content" >
+      <div *ngFor="let genre of genres">
+        <p ><a routerLink="/genres/{{genre.id}}" > {{ genre.name }} </a></p>
+      </div>
+    </div>
+  </div>         
+  <a routerLink="/popular">Popular</a>  
+  <a routerLink="/newbooks">New books</a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>

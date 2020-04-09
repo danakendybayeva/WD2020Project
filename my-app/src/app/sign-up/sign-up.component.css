@@ -1,0 +1,121 @@
+/* $left-color:  #242e4d;
+$right-color: #897e79;
+$green-dark:  #35c3c1;
+$green-light: #00d6b7;
+$gray:        #8f8f8f;
+$gray-light:  #f5f6f8; */
+
+.card {
+    width: 500px;
+    height: auto;
+    position: absolute;
+    background: white;
+    margin: 50px auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    left:30%;
+    text-align: center;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+}
+    
+.card:hover {
+    box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+.card p { 
+    line-height: 20px;
+    color: #727272;
+    margin: 0;
+}
+
+.login-form {
+    width: 100%;
+    padding: 2em;
+    padding-bottom: 1em;
+    position: relative;
+    background: rgba(black, .15);
+}
+.login-form:before {
+    content: '';
+    position: absolute;
+    top: -2px; left: 0;
+    height: 2px; width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      #66a3db,
+      #8fc1f0
+    );    
+}
+  
+/* @media screen and (min-width: 600px) {
+    width: 50vw;
+    max-width: 15em;
+} */
+
+.flex-row {
+    display: flex;
+    margin-bottom: 1em;
+    height: 4em;
+}
+  
+.lf--label {
+    width: 4em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    background: #f5f6f8;
+    cursor: pointer;
+}
+
+.fas{
+    font-size: 1.5em;
+}
+.lf--input {
+    height: 100%;
+    flex: 1;
+    padding: 1em;  
+    border: 0.5px solid #ddd;
+    color: #8f8f8f;
+    font-size: 1rem;
+
+}
+.lf--input:focus {
+    outline: none;
+    transition: transform .15s;
+    transform: scale(1.1, 1.1);
+}
+
+.lf--submit {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    
+    background: linear-gradient(
+      to right,
+      #66a3db,
+      #8fc1f0
+    );
+    border: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(black, .2);
+}
+.lf--submit:focus {
+    outline: none;
+    transition: transform .15s ease;
+    transform: scale(1.1);
+}
+
+.if--dont{
+    margin-top: 1em;
+    color: #8fc1f0;
+    font-size: .65em;
+    text-align: center;
+    position: relative;
+}
+
+::placeholder { color: #8f8f8f; }
