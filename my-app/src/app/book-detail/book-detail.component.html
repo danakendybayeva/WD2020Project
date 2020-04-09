@@ -9,6 +9,8 @@
       <h4><strong>Рейтинг:</strong> {{ book.rating }} </h4>
       <p>{{ book.description }}</p>
       <a target="_blank"><button (click)="addToCart(book)">Add to Cart</button></a>
-      
+      <a href="https://telegram.me/share/url?url=http://localhost:4200/books/{{book.id}}" target="_blank">
+        <button (click)="share()" class="share">Share to Telegram</button>
+      </a>
     </div>
 </div>
