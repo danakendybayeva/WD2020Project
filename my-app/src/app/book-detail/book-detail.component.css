@@ -96,3 +96,30 @@ button:hover {
 .share{
     width: 170px;
 }
+
+
+.dialogbox {
+    position: relative;
+    height: auto;
+    padding: 5px;
+    background-color: #f0ffff;
+    border-radius: 3px;
+    border: 1.5px solid #ccc;
+
+    min-height: 30px;
+    font-family: Arial;
+    line-height: 1.5;
+}
+
+.dialogbox .name{
+    font-weight: bold;
+    font-size: 17px;
+    text-decoration: underline;
+    color: #8b6969;
+    line-height: 3;
+    padding-left: 10px;
+}
+
+.dialogbox .comment{
+    font-size: 15px;
+}
