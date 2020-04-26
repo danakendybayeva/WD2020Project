@@ -1,10 +1,10 @@
 <div class="topnav">
-  <a routerLink="/books">All books</a>
+  <a routerLink="/book/all">All books</a>
   <div class="dropdown">
     <span>Genres <i class="fas fa-caret-down"></i></span>
     <div class="dropdown-content" >
-      <div *ngFor="let genre of genres">
-        <p ><a routerLink="/genres/{{genre.id}}" > {{ genre.name }} </a></p>
+      <div *ngFor="let genreone of genres">
+        <p ><a routerLink="/genre/{{genreone.id}}" > {{ genreone.name }} </a></p>
       </div>
     </div>
   </div>         

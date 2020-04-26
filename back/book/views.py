@@ -39,9 +39,7 @@ def get_all_books(request):
         book.name = data.get('name', 'defoult_name' + str(book.id))
         book.genre_id = data.get('genre_id', 1)
         book.save()
-
     return JsonResponse(book.to_json())
-
 
 class BookList(APIView) :
     def get(self, request) :

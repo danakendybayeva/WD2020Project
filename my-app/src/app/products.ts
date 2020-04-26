@@ -4,10 +4,10 @@ export interface Product{
     name: string;
     author: string;
     description: string;
-    price: string;
+    price: number;
     rating: number;
     year: number;
-    genre: number;
+    genre_id: number;
 }
 
 /*

@@ -12,9 +12,11 @@ import { PopularComponent} from './popular/popular.component';
 
 const routes: Routes = [
   { path: '', component: MainComponent },
-  { path: 'genres/:id', component: GenresComponent },
-  { path: 'books', component: BooksComponent },
-  { path: 'books/:id', component: BookDetailComponent },
+  { path: 'genre/:id', component: GenresComponent },
+  { path: 'genre/:id/books', component: GenresComponent },
+  { path: 'book/all', component: BooksComponent },
+  { path: 'book/:id', component: BookDetailComponent },
+  { path: 'book/:id/comments', component: BookDetailComponent },
   { path: 'cart', component: CartComponent },
   { path: 'login', component: LoginComponent },
   { path: 'signup', component: SignUpComponent },

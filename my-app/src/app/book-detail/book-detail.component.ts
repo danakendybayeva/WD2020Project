@@ -21,8 +21,8 @@ export class BookDetailComponent implements OnInit {
 
   ngOnInit(): void {
     this.getBookById();
+    console.log("book");
   }
-
   getBookById():void{
     const id = +this.route.snapshot.paramMap.get('id');
     this.productService.getBookById(id)

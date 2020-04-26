@@ -1,10 +1,3 @@
-/* $left-color:  #242e4d;
-$right-color: #897e79;
-$green-dark:  #35c3c1;
-$green-light: #00d6b7;
-$gray:        #8f8f8f;
-$gray-light:  #f5f6f8; */
-
 .card {
     width: 500px;
     height: auto;
@@ -103,11 +96,6 @@ $gray-light:  #f5f6f8; */
     font-size: .75em;
     font-weight: 600;
     text-shadow: 0 1px 0 rgba(black, .2);
-}
-.lf--submit:focus {
-    outline: none;
-    transition: transform .15s ease;
-    transform: scale(1.1);
 }
 
 .if--dont{
