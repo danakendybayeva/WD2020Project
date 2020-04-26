@@ -13,8 +13,11 @@
         <button (click)="share()" class="share">Share to Telegram</button>
       </a>
       <br>
-      <input type="text">
-      <span><strong>Комментарии:</strong></span>
+      <label>Напишите ваш комментарий:
+        <br><textarea #comment ></textarea>
+      </label>
+      <span><button >Add comment</button></span>
+      <p class="comment">Комментарии:</p>
       <br>
       <!-- <div *ngFor="let comment of comments">  -->
         <div class="dialogbox">
