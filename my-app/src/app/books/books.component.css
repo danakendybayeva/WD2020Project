@@ -2,12 +2,15 @@
   display: grid;
   grid-template-columns: auto auto auto auto;
   /* grid-gap: 0; */
-  padding: 50px;
+  padding: 30px;
+  padding-left: 15%;
+  width: 40%;
 }
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  max-width: 300px;
+  max-width: 250px;
+  height: 350px;
   margin: 10px;
   text-align: center;
   font-family: arial;
@@ -36,7 +39,7 @@
 
 .name{
   white-space: nowrap; 
-  width: 250px;
+  width: 200px;
   overflow: hidden;
   text-overflow: ellipsis; 
   margin-left: 10px;
