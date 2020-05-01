@@ -11,7 +11,7 @@
   padding-right: 40px;
 }
 
-.topnav a, .topnav span{
+.topnav .link, .topnav span{
   float: left;
   display: block;
   color: black;
@@ -22,7 +22,7 @@
   font-family: 'Gotu', sans-serif;  
 }
 
-.topnav a:hover{
+.topnav .link:hover{
   background-color: #ddd;
   color: black;
 }
@@ -41,9 +41,15 @@
 
 }
 
-.topnav .search-container button {
+.topnav .search-container a{
   float: right;
   padding: 6px 10px;
+
+}
+
+.topnav .search-container a button {
+  float: right;
+  /* padding: 6px 10px; */
   margin-top: 8px;
   margin-right: 16px;
   background-color: azure;

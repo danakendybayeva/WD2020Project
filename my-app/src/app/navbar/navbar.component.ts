@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Genre } from '../genre';
 import { GenresService } from '../genres.service';
+import { Product} from '../products';
+import { ProductService } from '../product.service';
+
+
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
@@ -8,15 +12,35 @@ import { GenresService } from '../genres.service';
 })
 export class NavbarComponent implements OnInit {
   genres: Genre[];
-  
-  constructor( private genresService: GenresService) { }
+  books: Product[];
+  searchBox = {
+    text: ''
+  };
+
+  constructor( 
+    private genresService: GenresService,
+    private productService: ProductService
+  ) { }
 
   ngOnInit(): void {
-    this.getGenres()
+    this.getGenres();
+    this.show();
   }
 
   getGenres(): void {
     this.genresService.getGenres().subscribe( genres => this.genres = genres)
+  }
+
+  select(): void {
+    var term = (<HTMLInputElement> document.getElementById("searchValue")).value;
+    this.searchBox.text = term;
+    console.log(term);
+  }
+
+  show(): void{
+    var term = (<HTMLInputElement> document.getElementById("searchValue")).value;
+    this.productService.searchBook(term)
+      .subscribe(books => this.books = books);
   }
 
 }

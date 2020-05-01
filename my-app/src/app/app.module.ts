@@ -16,10 +16,10 @@ import { GenresComponent } from './genres/genres.component';
 import { CartComponent } from './cart/cart.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
-import { SignUpComponent } from './sign-up/sign-up.component';
 import { MainComponent } from './main/main.component';
 import { PopularComponent } from './popular/popular.component';
 import { NewBooksComponent } from './new-books/new-books.component';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -41,10 +41,10 @@ import { NewBooksComponent } from './new-books/new-books.component';
     CartComponent,
     NavbarComponent,
     LoginComponent,
-    SignUpComponent,
     MainComponent,
     PopularComponent,
-    NewBooksComponent
+    NewBooksComponent,
+    SearchComponent
   ],
   providers: [ ],
   bootstrap: [ AppComponent ]

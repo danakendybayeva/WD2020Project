@@ -16,15 +16,14 @@
       <label>Напишите ваш комментарий:
         <br><textarea #comment ></textarea>
       </label>
-      <span><button >Add comment</button></span>
+      <span><button (click)="addComment(comment.value); comment.value=''">Add comment</button></span>
       <p class="comment">Комментарии:</p>
       <br>
-      <!-- <div *ngFor="let comment of comments">  -->
+      <div *ngFor="let c of comments">
         <div class="dialogbox">
-          <span class="name">name</span> <br>
-          <span class="text">Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</span>
+          <span class="text">{{ c.text }}</span>
         </div>
-      <!-- </div> -->
+      </div>
     </div>
 </div>
 

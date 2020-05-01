@@ -51,7 +51,7 @@ class BookList(APIView) :
         book = Book()
         book.name = r_data.get('name','None')
         book.price = r_data.get('price', 0)
-        book.genre_id = r_data.get('genre_id', )
+        book.genre_id = r_data.get('genre_id', 1)
         book.save()
         return Response(book.to_json())
 
@@ -109,7 +109,20 @@ class ForCommentsView(View) :
         commnets = book.comment_set.all()
         commnets_json = [c.to_json() for c in commnets]
         return JsonResponse(commnets_json, safe=False)
+    def post(self, request, book_id):
+        r_data = json.loads(request.body)
+        comment = Comment()
+        comment.text = r_data.get('text')
+        comment.book_id = r_data.get('book_id', 1)
+        comment.user_id = r_data.get('user_id', 1)
+        comment.save()
+        return JsonResponse(comment.to_json(), safe=False)
 
-
-
-
+def searchBook (request,pattern) :
+    books = Book.objects.all()
+    book_filtred = []
+    for book in books:
+        if pattern in book.name:
+            book_filtred.append(book)
+    books_tojson = [b.to_json() for b in book_filtred]
+    return JsonResponse(books_tojson, safe = False)

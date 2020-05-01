@@ -29,4 +29,8 @@ export class ProductService {
   getBookByGenre(id): Observable<Product[]>{
     return this.http.get<Product[]>(`${this.BASE_URL}/genre/${id}/books/`);
   }
+
+  searchBook(term: String): Observable<Product[]> {
+    return this.http.get<Product[]>(`${this.BASE_URL}/book/search/${term}`);
+  }
 }
